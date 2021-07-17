@@ -123,14 +123,8 @@ define('skylark-langx-ns/main',[
 });
 define('skylark-langx-ns', ['skylark-langx-ns/main'], function (main) { return main; });
 
-define('skylark-langx/skylark',[
-    "skylark-langx-ns"
-], function(ns) {
-	return ns;
-});
-
 define('skylark-pdfjs-display/pdfjs',[
-	"skylark-langx/skylark"
+	"skylark-langx-ns"
 ],function(skylark) {
 	return skylark.attach("intg.pdfjs");
 });
